@@ -1,0 +1,62 @@
+a.active{
+    border-bottom: 2px solid #2c2c2c;
+}
+
+table{
+    border-collapse: collapse;
+}
+  .mdl-layout__header{
+    background: #44b878;
+  }
+  .demo-layout-transparent .mdl-layout__header,
+  .demo-layout-transparent .mdl-layout__drawer-button {
+    /* This background is dark, so we set text to white. Use 87% black instead if
+       your background is light. */
+    color: white;
+  }
+  @media (max-width: 550px) {
+    table{
+        background: transparent;
+        box-shadow: 0 0 10px 2px #a0a0a0;
+    }
+    table thead{
+        display: none;
+
+    }
+    .added-filter{
+        flex-direction: column;
+    }
+    .filter{
+        flex-direction: column;
+    }
+    .search-icon{
+        display: none;
+    }
+    .search{
+        display: flex;
+        align-self: end;
+    }
+    table, tbody, tr, td{
+        display: block;
+        width: 100%;
+    }
+    table tr{
+        margin-bottom: 15px;
+    }
+    table td{
+        text-align: right;
+        padding:5px 5px 5px 50%;
+        position: relative;
+
+    }
+    table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
